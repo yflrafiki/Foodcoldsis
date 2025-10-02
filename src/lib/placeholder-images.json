@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "pizza-margherita",
+      "description": "Classic Margherita Pizza",
+      "imageUrl": "https://images.unsplash.com/photo-1520201163981-8cc95007dd2a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxwaXp6YSUyMGNoZWVzZXxlbnwwfHx8fDE3NTk0MjM1MjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pizza cheese"
+    },
+    {
+      "id": "pepperoni-pizza",
+      "description": "Spicy Pepperoni Pizza",
+      "imageUrl": "https://images.unsplash.com/photo-1631347155591-c162abe23014?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwaXp6YSUyMHBlcHBlcm9uaXxlbnwwfHx8fDE3NTkzNzQ3ODh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "pizza pepperoni"
+    },
+    {
+      "id": "coca-cola",
+      "description": "Refreshing Coca-Cola",
+      "imageUrl": "https://images.unsplash.com/photo-1581006855389-c17d881f3baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzb2RhJTIwZHJpbmt8ZW58MHx8fHwxNzU5NDQzNzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "soda drink"
+    },
+    {
+      "id": "orange-juice",
+      "description": "Fresh Orange Juice",
+      "imageUrl": "https://images.unsplash.com/photo-1641069765796-259c9b47bff4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxqdWljZSUyMG9yYW5nZXxlbnwwfHx8fDE3NTk0NDM3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "juice orange"
+    },
+    {
+      "id": "potato-chips",
+      "description": "Crispy Potato Chips",
+      "imageUrl": "https://images.unsplash.com/photo-1701341964637-94945a277fe0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjaGlwcyUyMHNuYWNrfGVufDB8fHx8MTc1OTQ0Mzc0NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chips snack"
+    },
+    {
+      "id": "chocolate-bar",
+      "description": "Delicious Chocolate Bar",
+      "imageUrl": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxjaG9jb2xhdGUlMjBjYW5keXxlbnwwfHx8fDE3NTk0NDM3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chocolate candy"
+    },
+    {
+      "id": "cheeseburger",
+      "description": "Juicy Cheeseburger with fries",
+      "imageUrl": "https://images.unsplash.com/photo-1623610934157-0fcb6d50e90f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxidXJnZXIlMjBmcmllc3xlbnwwfHx8fDE3NTk0MDY1MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "burger fries"
+    },
+    {
+      "id": "chicken-salad",
+      "description": "Healthy Chicken Salad",
+      "imageUrl": "https://images.unsplash.com/photo-1662192510806-00037e2793d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzYWxhZCUyMGNoaWNrZW58ZW58MHx8fHwxNzU5NDE2MDA3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "salad chicken"
+    }
+  ]
 }
