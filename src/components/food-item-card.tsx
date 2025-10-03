@@ -41,7 +41,7 @@ export default function FoodItemCard({ item }: FoodItemCardProps) {
             <CardTitle className="text-lg leading-tight mb-2 font-headline">{item.name}</CardTitle>
           </div>
           <p className="text-2xl font-bold font-headline text-primary mt-2">
-            ${item.price.toFixed(2)}
+            Ghc{item.price.toFixed(2)}
           </p>
         </CardContent>
         <CardFooter className="p-4 pt-0">

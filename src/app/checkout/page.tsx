@@ -142,13 +142,13 @@ export default function CheckoutPage() {
                   <p className="font-semibold">{item.name}</p>
                   <p className="text-sm text-muted-foreground">Qty: {item.quantity}</p>
                 </div>
-                <p>${(item.price * item.quantity).toFixed(2)}</p>
+                <p>Ghc{(item.price * item.quantity).toFixed(2)}</p>
               </div>
             ))}
           </CardContent>
           <CardFooter className="flex justify-between font-bold text-lg border-t pt-4 mt-4">
             <span>Total</span>
-            <span>${totalPrice.toFixed(2)}</span>
+            <span>Ghc{totalPrice.toFixed(2)}</span>
           </CardFooter>
         </Card>
       </div>

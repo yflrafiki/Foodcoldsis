@@ -114,7 +114,7 @@ export default function OrderHistoryPage() {
               </div>
                <div className="text-right">
                 <p className="text-sm text-muted-foreground">Total</p>
-                <p className="text-xl font-bold">${order.total.toFixed(2)}</p>
+                <p className="text-xl font-bold">Ghc{order.total.toFixed(2)}</p>
               </div>
             </CardHeader>
             <CardContent>
@@ -137,10 +137,10 @@ export default function OrderHistoryPage() {
                           <div className="flex-grow">
                             <p className="font-semibold">{item.name}</p>
                             <p className="text-sm text-muted-foreground">
-                              {item.quantity} x ${item.price.toFixed(2)}
+                              {item.quantity} x Ghc{item.price.toFixed(2)}
                             </p>
                           </div>
-                          <p className="font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
+                          <p className="font-semibold">Ghc{(item.price * item.quantity).toFixed(2)}</p>
                         </div>
                       ))}
                     </div>
