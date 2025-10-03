@@ -9,7 +9,7 @@ export const foodItems: FoodItem[] = [
     name: 'Margherita Pizza',
     category: 'meals',
     price: 12.99,
-    imageUrl: getImage('pizza-margherita')?.imageUrl || "https://picsum.photos/seed/pizza1/400/300",
+    imageUrl: getImage('pizza-margherita')?.imageUrl || "https://images.unsplash.com/photo-1627626775846-122b778965ae?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGl6emEtbWFyZ2hlcml0YXxlbnwwfHwwfHx8MA%3D%3D",
     imageHint: getImage('pizza-margherita')?.imageHint || "pizza cheese"
   },
   {
@@ -68,4 +68,13 @@ export const foodItems: FoodItem[] = [
     imageUrl: getImage('chicken-salad')?.imageUrl || "https://picsum.photos/seed/salad/400/300",
     imageHint: getImage('chicken-salad')?.imageHint || "salad chicken"
   },
+  {
+    id: '9',
+    name: 'spaghetti bolognese',
+    category: 'meals',
+    price: 13.50,
+    imageUrl: getImage('spaghetti-bolognese')?.imageUrl || "https://media.istockphoto.com/id/2227721318/photo/spaghetti-bolognese-fork-fast-food.webp?a=1&b=1&s=612x612&w=0&k=20&c=qx_QEmYc3dnZ9LVc9k3KTI4f5_AE6e-uILAjZ6wCeOc=",
+    imageHint: getImage('spaghetti-bolognese')?.imageHint || "spaghetti pasta"
+
+  }
 ];

@@ -15,8 +15,8 @@ import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
-  phone: z.string().regex(/^\+?[1-9]\d{1,14}$/, { message: 'Invalid phone number format.' }),
-  address: z.string().min(10, { message: 'Address must be at least 10 characters.' }),
+  phone: z.string().length(10, { message: 'Phone number must be 10 digits.' }),
+  address: z.string().min(1, { message: 'Address cannot be empty.' }),
 });
 
 export default function CheckoutPage() {
@@ -53,6 +53,11 @@ export default function CheckoutPage() {
       localStorage.setItem('foodie-orders', JSON.stringify([...existingOrders, newOrder]));
 
       clearCart();
+       toast({
+        title: "Order Placed!",
+        description: "Your order has been completed successfully.",
+      });
+      
       router.push('/order-confirmation');
     } catch (error) {
       console.error('Failed to place order:', error);

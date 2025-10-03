@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { ShoppingCart, Utensils } from 'lucide-react';
+import {History, ShoppingCart, Utensils } from 'lucide-react';
 import { useCart } from '@/hooks/use-cart';
 import { Button } from '@/components/ui/button';
 import { usePathname } from 'next/navigation';
