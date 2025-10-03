@@ -79,10 +79,10 @@ export default function CartPage() {
                 <span>Subtotal</span>
                 <span>${totalPrice.toFixed(2)}</span>
               </div>
-              <div className="flex justify-between">
+              {/* <div className="flex justify-between">
                 <span>Shipping</span>
                 <span>Free</span>
-              </div>
+              </div> */}
               <div className="flex justify-between font-bold text-lg border-t pt-4">
                 <span>Total</span>
                 <span>${totalPrice.toFixed(2)}</span>

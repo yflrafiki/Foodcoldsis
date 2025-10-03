@@ -76,5 +76,21 @@ export const foodItems: FoodItem[] = [
     imageUrl: getImage('spaghetti-bolognese')?.imageUrl || "https://media.istockphoto.com/id/2227721318/photo/spaghetti-bolognese-fork-fast-food.webp?a=1&b=1&s=612x612&w=0&k=20&c=qx_QEmYc3dnZ9LVc9k3KTI4f5_AE6e-uILAjZ6wCeOc=",
     imageHint: getImage('spaghetti-bolognese')?.imageHint || "spaghetti pasta"
 
-  }
+  },
+  {
+    id: '10',
+    name: 'Waakye',
+    category: 'meals',
+    price: 5.00,
+    imageUrl: getImage('Waakye')?.imageUrl || "https://media.istockphoto.com/id/184973888/photo/garlic-bread.jpg?s=612x612&w=0&k=20&c=ZkLh1bX3bX4nUu1kHf5rY8mXW2cX9b6v3Fz8eEJz4mM=",
+    imageHint: getImage('Waakye')?.imageHint || "Waaky"
+  },
+  {
+    id: '11',
+    name: 'Veggie Burger',
+    category: 'meals',
+    price: 13.50,
+    imageUrl: getImage('veggie-burger')?.imageUrl || "https://picsum.photos/seed/veggie/400/300",
+    imageHint: getImage('veggie-burger')?.imageHint || "veggie burger",
+  },
 ];

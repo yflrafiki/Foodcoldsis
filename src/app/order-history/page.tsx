@@ -6,8 +6,19 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { History, ShoppingCart } from 'lucide-react';
+import { History, ShoppingCart, Trash2 } from 'lucide-react';
 import Image from 'next/image';
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog"
 
 export default function OrderHistoryPage() {
   const [orders, setOrders] = useState<Order[]>([]);
@@ -25,6 +36,25 @@ export default function OrderHistoryPage() {
       setIsLoading(false);
     }
   }, []);
+
+  const updateLocalStorage = (updatedOrders: Order[]) => {
+    try {
+      localStorage.setItem('foodie-orders', JSON.stringify(updatedOrders));
+    } catch (error) {
+      console.error("Failed to save orders to localStorage", error);
+    }
+  };
+
+  const handleDeleteOrder = (orderId: string) => {
+    const updatedOrders = orders.filter(order => order.id !== orderId);
+    setOrders(updatedOrders);
+    updateLocalStorage(updatedOrders);
+  };
+  
+  const handleClearHistory = () => {
+    setOrders([]);
+    updateLocalStorage([]);
+  };
 
   if (isLoading) {
     return <div className="text-center py-20">Loading order history...</div>;
@@ -45,7 +75,29 @@ export default function OrderHistoryPage() {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">Your Order History</h1>
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl md:text-4xl font-bold text-center">Your Order History</h1>
+        <AlertDialog>
+          <AlertDialogTrigger asChild>
+            <Button variant="destructive" size="sm">
+              <Trash2 className="mr-2 h-4 w-4" />
+              Clear History
+            </Button>
+          </AlertDialogTrigger>
+          <AlertDialogContent>
+            <AlertDialogHeader>
+              <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+              <AlertDialogDescription>
+                This action cannot be undone. This will permanently delete your entire order history.
+              </AlertDialogDescription>
+            </AlertDialogHeader>
+            <AlertDialogFooter>
+              <AlertDialogCancel>Cancel</AlertDialogCancel>
+              <AlertDialogAction onClick={handleClearHistory}>Continue</AlertDialogAction>
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialog>
+      </div>
       <div className="space-y-6">
         {orders.map((order) => (
           <Card key={order.id}>
@@ -96,8 +148,27 @@ export default function OrderHistoryPage() {
                 </AccordionItem>
               </Accordion>
             </CardContent>
-             <CardFooter className="flex justify-between items-center text-sm text-muted-foreground">
-                <p>Delivered to: {order.customer.address}</p>
+             <CardFooter className="flex justify-between items-center">
+                <p className="text-sm text-muted-foreground">Delivered to: {order.customer.address}</p>
+                <AlertDialog>
+                  <AlertDialogTrigger asChild>
+                    <Button variant="ghost" size="icon" className="text-destructive">
+                      <Trash2 className="h-5 w-5" />
+                    </Button>
+                  </AlertDialogTrigger>
+                  <AlertDialogContent>
+                    <AlertDialogHeader>
+                      <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                      <AlertDialogDescription>
+                        This will permanently delete this order from your history.
+                      </AlertDialogDescription>
+                    </AlertDialogHeader>
+                    <AlertDialogFooter>
+                      <AlertDialogCancel>Cancel</AlertDialogCancel>
+                      <AlertDialogAction onClick={() => handleDeleteOrder(order.id)}>Delete</AlertDialogAction>
+                    </AlertDialogFooter>
+                  </AlertDialogContent>
+                </AlertDialog>
              </CardFooter>
           </Card>
         ))}
